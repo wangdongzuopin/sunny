@@ -1,0 +1,74 @@
+
+@import url(animation.css) ;
+/* 导航栏 */
+*{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #e9ecef;
+}
+ul li{
+   list-style: none;
+}
+.nav{
+    position: absolute;
+    display: flex;
+    height: 100px;
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+    justify-content: space-between;
+    z-index: 999;
+}
+.nav>div{
+    height: 100px;
+}
+.nav>div:first-child{
+    width: 10%;
+    background: url('../image/title.png') 0 / 85% no-repeat;
+}
+.nav .nav_list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav .nav_list ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav .nav_list li{
+    padding: 20px;  
+    color: #FFF;
+    cursor: pointer;
+    font-size: 18px;
+}
+.nav .nav_list li:hover{
+    color: 	#999999;
+}
+.nav .piece_love{
+    display: flex;
+    align-items: flex-end;
+    font-size: 13px;
+    color: #FFF;
+}
+/* 导航栏end */
+
+/* main内容主页 */
+
+.main{
+    width: 80%;
+    margin: 20px auto;
+    min-height: 200px;
+    background-color: #FFF;
+}
+.main-video{
+    cursor: pointer;
+}
+/* main内容主页end */
+

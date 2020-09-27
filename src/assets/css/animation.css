@@ -1,0 +1,28 @@
+@keyframes myfirst
+{
+    0%{
+        width: 100%;
+    }
+    100%{
+        width: 0%;
+        display: none;
+    }
+}
+/* 
+@-moz-keyframes myfirst 
+{
+    from {width: 0%;}
+    to {width: 100%;}
+}
+
+@-webkit-keyframes myfirst
+{
+    from {width: 0%;}
+    to {width: 100%;}
+}
+
+@-o-keyframes myfirst 
+{
+    from {width: 0%;}
+    to {width: 100%;}
+} */
