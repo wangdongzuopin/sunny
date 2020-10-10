@@ -1,0 +1,51 @@
+<template>
+  <div class="center">
+    <div>
+      <input class="input" v-model="input" type="text" />
+    </div>
+    <div>
+      <button class="btn" @click="playVoicehhh">你写什么我说什么</button>
+    </div>
+    <div class="text">
+      <span>{{ msg }}</span>
+    </div>
+    
+  </div>
+</template>
+
+<script>
+const synth = window.speechSynthesis;
+const msg = new SpeechSynthesisUtterance();
+export default {
+  data() {
+    return {
+      input: "",
+      msg: "",
+    };
+  },
+  methods: {
+    playVoicehhh() {
+      this.handleSpeak(this.input); // 传入需要播放的文字
+    },
+    // 语音播报的函数
+    handleSpeak(text) {
+      msg.text = text; // 文字内容: 小朋友，你是否有很多问号
+      msg.lang = "zh-CN"; // 使用的语言:中文
+      msg.volume = 1; // 声音音量：1
+      msg.rate = 1; // 语速：1
+      msg.pitch = 1; // 音高：1
+      synth.speak(msg); // 播放
+      this.msg = this.input;
+      setTimeout(() => {
+        this.msg = "";
+      },2000);
+    },
+    // 语音停止
+    handleStop(e) {
+      msg.text = e;
+      msg.lang = "zh-CN";
+      synth.cancel(msg);
+    },
+  },
+};
+</script>

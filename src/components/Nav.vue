@@ -1,7 +1,7 @@
 <template>
     <div class="nav">
       <!-- Logo -->
-      <div></div>
+      <div class="nav-logo"></div>
       <!-- list -->
       <div class="nav_list">
         <ul>
