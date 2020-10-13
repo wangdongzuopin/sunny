@@ -1,6 +1,5 @@
 <template>
-  <div class="banner">
-        
+  <div class="banner"  @mouseover="clearInv" @mouseout="runInv">
     <ul>
       <li
         v-for="(ban, i) in banner"
@@ -37,6 +36,12 @@ export default {
     };
   },
   methods: {
+    clearInv(){
+      clearInterval(this.nums.timer);
+    },
+    runInv(){
+      this.play()
+    },
     banClick(index) {
       this.nums.num = index;
       clearInterval(this.nums.timer);

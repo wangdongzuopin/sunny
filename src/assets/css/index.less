@@ -1,6 +1,4 @@
-
 @import url(animation.css) ;
-@import url(button.css) ;
 @import url(wd.css) ;
 
 @wcolor:#FFF;
@@ -17,8 +15,15 @@
 body{
     background-color: #e9ecef;
 }
+a{
+    text-decoration: none;
+    color: inherit;
+}
 ul li{
    list-style: none;
+}
+nav{
+    line-height: 0;
 }
 .nav{
     position: absolute;
@@ -33,7 +38,8 @@ ul li{
         height: 100px;
     }
     .nav-logo{
-        width: 10%;
+        width: 150px;
+        height: 120px;
         background: url('../image/title.png');
         background-size:cover;
         background-repeat:no-repeat;
@@ -134,3 +140,25 @@ ul li{
 }
 /* main内容主页end */
 
+
+// 地图页面
+.map{
+    width: 100%;
+    height: 500px;
+    background-color: @wcolor;
+    margin: 5px 0;
+    .map-map{
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.829);
+        position: relative;
+    }
+    .map-point{
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: @wcolor;
+        position: absolute;
+    }
+}
+// 地图end

@@ -4,12 +4,11 @@
       <input class="input" v-model="input" type="text" />
     </div>
     <div>
-      <button class="btn" @click="playVoicehhh">你写什么我说什么</button>
+      <wd-Button @click.native="playVoicehhh">你写什么我说什么</wd-Button>
     </div>
     <div class="text">
       <span>{{ msg }}</span>
     </div>
-    
   </div>
 </template>
 
@@ -25,7 +24,14 @@ export default {
   },
   methods: {
     playVoicehhh() {
-      this.handleSpeak(this.input); // 传入需要播放的文字
+      if (this.input) {
+        console.log(typeof this.input);
+        console.log(this.input instanceof String);
+        if ([] instanceof Number) {
+          this.input.split("").join(" ");
+        }
+        this.handleSpeak(this.input); // 传入需要播放的文字
+      }
     },
     // 语音播报的函数
     handleSpeak(text) {
@@ -38,7 +44,7 @@ export default {
       this.msg = this.input;
       setTimeout(() => {
         this.msg = "";
-      },2000);
+      }, 2000);
     },
     // 语音停止
     handleStop(e) {

@@ -17,7 +17,7 @@ export default {
       data: [
         { path: "/", text: "首页" },
         { path: "/", text: "随笔" },
-        { path: "/", text: "地图" },
+        { path: "/maper", text: "地图" },
       ],
       banner: [
         { src: require("../assets/image/banner1.jpg") },

@@ -9,6 +9,8 @@ Vue.use(VideoPlayer)
 import 'normalize.css/normalize.css'
 import './assets/css/index.css'
 
+import WdButton from './common/WdButton/index'//引用全局组件Button
+Vue.use(WdButton)
 
 Vue.config.productionTip = false
 
