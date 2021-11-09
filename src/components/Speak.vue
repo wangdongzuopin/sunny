@@ -5,6 +5,8 @@
     </div>
     <div>
       <wd-Button @click.native="playVoicehhh">你写什么我说什么</wd-Button>
+      <!-- <wd-Button @click.native="pause">暂停</wd-Button>
+      <wd-Button @click.native="resume">继续</wd-Button> -->
     </div>
     <div class="text">
       <span>{{ msg }}</span>
@@ -14,7 +16,8 @@
 
 <script>
 const synth = window.speechSynthesis;
-const msg = new SpeechSynthesisUtterance();
+const msg = new SpeechSynthesisUtterance('你说嘿，我说嘿，大家一起嘿嘿嘿');
+window.speechSynthesis.speak(msg);
 export default {
   data() {
     return {
@@ -42,10 +45,14 @@ export default {
       msg.pitch = 1; // 音高：1
       synth.speak(msg); // 播放
       this.msg = this.input;
-      setTimeout(() => {
-        this.msg = "";
-      }, 2000);
+      // setTimeout(() => {
+      //   this.msg = "";
+      // }, 2000);
     },
+    // pause(){
+    //   synth.pause()
+    // },
+    // resume(){synth.resume()},
     // 语音停止
     handleStop(e) {
       msg.text = e;
