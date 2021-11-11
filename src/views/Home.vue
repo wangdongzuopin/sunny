@@ -4,7 +4,10 @@
     <div class="main">
       <Speak></Speak>
     </div>
-    <Foot></Foot>
+    <div>
+      <Foot></Foot>
+    </div>
+   
   </div>
 </template>
 
